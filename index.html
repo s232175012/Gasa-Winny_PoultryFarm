@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gasa & Winny's Poultry Farm</title>
+
+    <link rel="stylesheet" href="Styles/cssStyle.css" type="text/css">
+    <link rel="shortcut icon" href="Images/logo.jpeg" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Images/logo.jpeg" alt="G&W Logo">
+                <span>Gasa & Winny's Poultry Farm</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#order">Order Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+    
+            <div class="whatsapp-stack">
+                <a href="https://wa.me/27712680152" class="btn-whatsapp" target="_blank">WhatsApp Gasa</a>
+                <a href="https://wa.me/27825148361" class="btn-whatsapp" target="_blank">WhatsApp Winny</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-text">
+                <h1>Welcome to G<span>&</span>W Poultry Farm</h1>
+                <p>Quality poultry from our farm to your table. Trusted by families across SA.</p>
+
+                <div class="hero-btns">
+                    <a href="#products" class="btn btn-Product">Products</a>
+                    <a href="#order" class="btn btn-Order">Order Now</a>
+                    <a href="#contact" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="hero-img">
+                <img src="Images/farmPic.png" alt="Gasa and Winny's Poultry Farm">
+            </div>
+        </section>
+
+
+        <section id="about">
+            <h1>About Us</h1>
+            <div class="about-content">
+                <p>
+                    Gasa and Winny's Poultry Farm is a small growing company based in Umzimkhulu township in a village called Mfulamhle.
+                </p>
+
+                <p>
+                    This is a partnership company founded by <span class="about-founder">Lwazi Msomi (Gasa)</span> and 
+                    <span class="about-founder">Bawinile Tshabalala (Winny)</span>.
+                </p>
+                
+                <p>
+                    We focus on growing and supplying chickens nationwide.
+                </p>
+                
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h3>Objectives</h3>
+                        
+                        <p>
+                            To give healthy and fresh meat at the lowest price. We also focus on supplying chickens to small growing businesses and large companies as per the needs of the companies.
+                        </p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h3>How It Works</h3>
+
+                        <p>
+                            Customers can visit our site and buy using their own transportation. We also do deliveries to companies or people who can't come to the site. 
+                            For placing an order, contact or WhatsApp any number provided on our site.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products">
+            <h1>Products</h1>
+            
+            <div class="product-grid">
+
+                
+                <!-- CARD 1: 5 WEEKS -->
+                 <div class="product-card">
+                    <h3>Broilers - 5 Weeks Old</h3>
+                    
+                    <div class="product-img-wrapper" onclick="openGallery('gallery5')">
+                        <img src="Images/5W1.png" alt="5 Week Broilers" class="main-img">
+                        <div class="zoom-icon">🔍</div>
+                    </div>
+
+                    <p class="price">R70.00 each</p>
+                    <a href="#order" class="btn btn-Order">Order Now</a>
+                    
+                    <!-- Hidden gallery images -->
+                     <div id="gallery5" class="gallery-hidden">
+                        <img src="Images/5W2.png" alt="">
+                        <img src="Images/5W3.png" alt="">
+                        <img src="Images/5W4.png" alt="">
+                        <img src="Images/5W5.png" alt="">
+                    </div>
+                </div>
+
+
+                <!-- CARD 2: 6 WEEKS -->
+                <div class="product-card">
+                    <h3>Broilers - 6 Weeks Old</h3>
+                    
+                    <div class="product-img-wrapper" onclick="openGallery('gallery6')">
+                        <img src="Images/6W1.png" alt="6 Week Broilers" class="main-img">
+                        <div class="zoom-icon">🔍</div>
+                    </div>
+                    
+                    <p class="price">R85.00 each</p>
+                    <a href="#order" class="btn btn-Order">Order Now</a>
+                    
+                    <!-- Hidden gallery images -->
+                     <div id="gallery6" class="gallery-hidden">
+
+                        <img src="Images/6W2.png" alt="">
+                        <img src="Images/6W3.png" alt="">
+                        <img src="Images/6W4.png" alt="">
+                        <img src="Images/6W5.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- LIGHTBOX POPUP WITH ARROWS + COUNTER -->
+         <div id="lightbox" class="lightbox" onclick="closeGallery(event)">
+            <span class="close-btn">&times;</span>
+            
+            <button class="arrow-btn prev-btn" onclick="prevImage(event)">❮</button>
+
+            <div class="lightbox-wrapper">
+                <img id="lightbox-img" src="" alt="Product Image">
+                <div id="image-counter">1 / 5</div>
+            </div>
+
+            <button class="arrow-btn next-btn" onclick="nextImage(event)">❯</button>
+        </div>
+
+        <!--Order Section-->
+        <section id="order">
+            <h1>Order Now</h1>
+            
+            <p class="delivery-note">Delivery is free around Mnzimvubu. <br> NB: Minimum 100 chickens for delivery.</p>
+            
+            <form id="orderForm" class="order-form">
+                <div class="form-row">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="text" id="surname" placeholder="Surname" required>
+                </div>
+
+                <input type="tel" id="cell" placeholder="Cell Number: 07XXXXXXXX" required pattern="[0-9]{10}">
+
+                <input type="text" id="location" placeholder="Location / Address in Mnzimvubu" required>
+
+                <div class="form-row">
+                    <div class="qty-box">
+                        <label>5 Weeks Qty - R70 each</label>
+                        <input type="number" id="qty5" min="0" value="0">
+                    </div>
+                    
+                    <div class="qty-box">
+                        <label>6 Weeks Qty - R85 each</label>
+                        <input type="number" id="qty6" min="0" value="0">
+                    </div>
+                </div>
+
+                <p id="total-display">Total chickens: 0 | Total amount: R0</p>
+                <p id="error-msg" class="error"></p>
+
+                <button type="submit" class="btn btn-Order">Send Order via Email</button>
+            </form>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p class="contact-sub">Order, questions, or farm visit? Reach Gasa or Winny directly</p>
+
+            <div class="contact-grid">
+            <!-- GASA CARD -->
+            <div class="contact-card">
+                <h3>Gasa</h3>
+                <p class="contact-number"><i class="fa-solid fa-phone"></i> 071 268 0152</p>
+                
+                <div class="contact-btns">
+                    <a href="https://wa.me/27712680152" target="_blank" class="btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp Gasa
+                    </a>
+                    
+                    <a href="tel:0712680152" class="btn btn-call">
+                        <i class="fa-solid fa-phone-volume"></i> Call Gasa
+                    </a>
+                    <a href="mailto:gasawinnyspfgw@gmail.com?subject=Query for Gasa" class="btn btn-email">
+                        <i class="fa-solid fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
+
+            <!-- WINNY CARD -->
+            <div class="contact-card">
+                <h3>Winny</h3>
+                <p class="contact-number"><i class="fa-solid fa-phone"></i> 082 514 8361</p>
+                
+                <div class="contact-btns">
+                    <a href="https://wa.me/27825148361" target="_blank" class="btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp Winny
+                    </a>
+                    
+                    <a href="tel:0825148361" class="btn btn-call">
+                        <i class="fa-solid fa-phone-volume"></i> Call Winny
+                    </a>
+                    
+                    <a href="mailto:gasawinnyspfgw@gmail.com?subject=Query for Winny" class="btn btn-email">
+                        <i class="fa-solid fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <p class="footer-line">© 2026 Gasa & Winny's Poultry Farm</p>
+        <p class="footer-line">
+            <i class="fa-solid fa-location-dot"></i> SA, Umzimkhulu 3297, Mfulamhle kwa Nguse
+        </p>
+        <p class="footer-line"><span class="footer-gold">Since 2024</span></p>
+    </footer>    
+    
+    <script src="Scripts/javasc.js" type="text/javascript"></script>
+</body>
+</html>
